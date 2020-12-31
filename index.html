@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/12bee3b7ef.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <form id="city-form">
+          <input type="search" id="city" placeholder="Change location" class="change-location" autocomplete="off" />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+        <div class="city-container">
+          <h1>City name</h1>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <ul class='today-day-time'>
+              <li>Today</li>
+              <li class="current-day">Weekday</li>
+              <li class="current-time">Time</li>
+            </ul>
+            <h3><span class="current-temp"></span><span class="tempCF"><a class="current-celcius" href="#">°C</a> | <a
+                  class="current-fahrenheit" href="#">°F</a></span></h3>
+            <h4></h4>
+          </div>
+          <div class="col-6 center-icon">
+            <i class="fas fa-cloud-showers-heavy weather-icon-large"></i>
+            <ul class="humidity-wind">
+              <li>Humidity: <span id="humidity">0</span> %</li>
+              <li>Wind: <span id="wind">0</span> km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row next-day-container">
+          <div class="col-8">
+            <ul class=next-day-temp>
+              <li>Thursday</li>
+              <li>4°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><i class="fas fa-cloud weather-icon-small"></i></div>
+        </div>
+        <div class="row next-day-container">
+          <div class="col-8">
+            <ul class=next-day-temp>
+              <li>Friday</li>
+              <li>6°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><i class="fas fa-cloud-sun-rain weather-icon-small"></i></div>
+        </div>
+        <div class="row next-day-container">
+          <div class="col-8">
+            <ul class=next-day-temp>
+              <li>Saturday</li>
+              <li>3°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><i class="fas fa-cloud weather-icon-small"></i></div>
+        </div>
+        <div class="row next-day-container">
+          <div class="col-8">
+            <ul class=next-day-temp>
+              <li>Sunday</li>
+              <li>6°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><i class="fas fa-cloud-sun weather-icon-small"></i></div>
+        </div>
+        <div class="row next-day-container">
+          <div class="col-8">
+            <ul class=next-day-temp>
+              <li>Monday</li>
+              <li>7°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><i class="fas fa-cloud-sun weather-icon-small"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="src/js-data-types.js"></script>
+</body>
+
+</html>
