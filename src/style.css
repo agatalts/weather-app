@@ -49,14 +49,25 @@ ul {
 }
 
 a {
-  color: #2fd0dc;
+  color: #247e85;
+
   transition: all 200ms ease-in-out;
 }
 
 a:hover {
-  color: #247e85;
+  color: #4bf3ff;
   text-decoration: none;
-  cursor: pointer;
+}
+
+.active {
+  color: #2fd0dc;
+  transition: all 200ms ease-in-out;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #2fd0dc;
 }
 
 .tempCF {

@@ -28,27 +28,10 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
   
-  
+ 
 
 
-//function showFahrenheit(event) {
-  //event.preventDefault();
-  //let currentTemp = document.querySelector("span.current-temp");
-  //currentTemp.innerHTML = `50`
-  // let fahrenheitTemp = Math.round((temperature * 9) / 5 + 32);
-//}
 
-//let clickFahrenheit = document.querySelector("a.current-fahrenheit");
-//clickFahrenheit.addEventListener("click", showFahrenheit);
-
-//function showCelcius(event) {
-  //event.preventDefault();
-  //let currentTemp = document.querySelector("span.current-temp");
-  //currentTemp.innerHTML = `10`
-//}
-
-//let clickCelcius = document.querySelector("a.current-celcius");
-//clickCelcius.addEventListener("click", showCelcius);
 
 
 function search(cityName) {
@@ -59,12 +42,41 @@ function search(cityName) {
 
 
 function showConditions(response) {
+  let iconElement = document.querySelector("#icon");
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".current-temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("h4").innerHTML = response.data.weather[0].main;
   document.querySelector("li.day-and-time").innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
+}
+
+ 
+
+
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".current-temp");
+
+  showCelcius.classList.remove("active");
+  showFahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  showCelcius.classList.add("active");
+  showFahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector(".current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function showCity(event) {
@@ -73,9 +85,17 @@ function showCity(event) {
   search(cityName);
 }
 
+
+let celsiusTemperature = null;
+
+
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", showCity);
 
+let showFahrenheit = document.querySelector("#showFahrenheit");
+showFahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
+let showCelcius = document.querySelector("#showCelcius");
+showCelcius.addEventListener("click", displayCelsiusTemperature);
 
 search("New York")
