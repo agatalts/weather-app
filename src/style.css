@@ -22,9 +22,10 @@ h1 {
 
 h3 {
   font-size: 60px;
-  text-align: center;
+  text-align: right;
   color: #b9f6fa;
   margin-bottom: 0;
+  margin-right: 20px;
 }
 
 h4 {
