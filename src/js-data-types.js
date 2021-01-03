@@ -31,9 +31,14 @@ function formatHours(timestamp) {
  
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  let timezone = response.data.city.timezone;
-  forecastElement.innerHTML = `
+  forecastElement.innerHTML = null;
+  let forecast = null;
+  
+
+for (let index = 0; index < 5; index++) {
+  forecast = response.data.list[index];
+  timezone = response.data.city.timezone;
+  forecastElement.innerHTML += `
           <div class="row next-day-container">
           <div class="col-8 hours-and-temp">
             <ul class=next-day-temp>
@@ -43,9 +48,8 @@ function showForecast(response) {
           </div>
           <div class="col-4 for-weather-icon-small"><img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" height=50px /></div>
         </div>`;
-  console.log(response.data);
 }
-
+}
 
 
 
@@ -60,7 +64,6 @@ function search(cityName) {
 
 
 function showConditions(response) {
-  console.log(response.data);
   let iconElement = document.querySelector("#icon");
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".current-temp").innerHTML = Math.round(response.data.main.temp);
