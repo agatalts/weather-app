@@ -29,7 +29,21 @@ function formatHours(timestamp) {
 }
   
  
-
+function showForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  forecastElement.innerHTML = `
+          <div class="row next-day-container">
+          <div class="col-8 hours-and-temp">
+            <ul class=next-day-temp>
+              <li>in next 3 hours</li>
+              <li><strong>${Math.round(forecast.main.temp_max)}°C</strong> / ${Math.round(forecast.main.temp_min)}°C</li>
+            </ul>
+          </div>
+          <div class="col-4 for-weather-icon-small"><img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" height=50px /></div>
+        </div>`;
+  console.log(response.data);
+}
 
 
 
@@ -38,6 +52,9 @@ function search(cityName) {
   let apiKey = "791caf474f5e47b0c7a34593ae174a7e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
    axios.get(apiUrl).then(showConditions);
+
+   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
+   axios.get(apiUrl).then(showForecast);
 }
 
 

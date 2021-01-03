@@ -80,6 +80,7 @@ a:hover {
 .next-day-temp {
   text-align: left;
   margin-bottom: 0;
+  padding-right: 0;
 }
 
 .city-container {
@@ -139,21 +140,19 @@ a:hover {
   color: #b9f6fa;
 }
 
-.weather-icon-small {
-  font-size: 34px;
-  margin-top: 9px;
-  color: #31d8e5;
-}
-
 .row .next-day-container {
   border: 1px solid #24aab6;
   border-radius: 7px;
-  font-size: 19px;
+  font-size: 12px;
   line-height: 26px;
   margin: 9px 0 9px 0;
   padding: 0;
   color: #24aab6;
 }
-.col-4 .for-weather-icon-small {
-  padding: 2px;
+.for-weather-icon-small {
+  padding: 0px;
+}
+
+.hours-and-temp {
+  padding-right: 0;
 }
