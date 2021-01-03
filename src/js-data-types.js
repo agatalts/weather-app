@@ -32,11 +32,12 @@ function formatHours(timestamp) {
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
+  let timezone = response.data.city.timezone;
   forecastElement.innerHTML = `
           <div class="row next-day-container">
           <div class="col-8 hours-and-temp">
             <ul class=next-day-temp>
-              <li>in next 3 hours</li>
+              <li>${formatHours((forecast.dt + timezone) * 1000)}</li>
               <li><strong>${Math.round(forecast.main.temp_max)}°C</strong> / ${Math.round(forecast.main.temp_min)}°C</li>
             </ul>
           </div>
@@ -59,13 +60,14 @@ function search(cityName) {
 
 
 function showConditions(response) {
+  console.log(response.data);
   let iconElement = document.querySelector("#icon");
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".current-temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("h4").innerHTML = response.data.weather[0].main;
-  document.querySelector("li.day-and-time").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("li.day-and-time").innerHTML = formatDate((response.data.dt + response.data.timezone) * 1000);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

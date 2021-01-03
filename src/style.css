@@ -32,7 +32,7 @@ h4 {
   font-size: 18px;
   text-align: center;
   color: #2fd0dc;
-  margin-top: 7px;
+  margin-top: 0px;
 }
 
 h5 {
@@ -88,7 +88,7 @@ a:hover {
   width: 100%;
   background: linear-gradient(135deg, #074655, #136a78);
   padding: 5px 0 7px;
-  margin: 0px 5px 10px 6px;
+  margin: 0px 5px 5px 6px;
   border-radius: 7px;
 }
 
