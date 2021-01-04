@@ -1,6 +1,6 @@
 .container {
-  background: linear-gradient(135deg, #136a78, #013242);
-  border: 3px solid #24aab6;
+  background: linear-gradient(135deg, #99dcf6, #0cd1be);
+  border: 3px solid #028ba3;
   border-radius: 7px;
   margin: 60px auto;
   margin-bottom: 3px;
@@ -17,13 +17,13 @@ h1 {
   font-size: 30px;
   margin: auto;
   vertical-align: middle;
-  color: #75f0f7;
+  color: #026172;
 }
 
 h3 {
   font-size: 60px;
   text-align: right;
-  color: #b9f6fa;
+  color: #026172;
   margin-bottom: 0;
   margin-right: 20px;
 }
@@ -31,7 +31,7 @@ h3 {
 h4 {
   font-size: 18px;
   text-align: center;
-  color: #2fd0dc;
+  color: #026f83;
   margin-top: 0px;
 }
 
@@ -50,25 +50,26 @@ ul {
 }
 
 a {
-  color: #247e85;
+  color: #028ba3;
 
   transition: all 200ms ease-in-out;
 }
 
 a:hover {
-  color: #4bf3ff;
+  color: #053942;
   text-decoration: none;
 }
 
 .active {
-  color: #2fd0dc;
+  color: #026f83;
   transition: all 200ms ease-in-out;
   cursor: default;
+  font-weight: bolder;
 }
 
 .active:hover {
   text-decoration: none;
-  color: #2fd0dc;
+  color: #026f83;
 }
 
 .tempCF {
@@ -86,7 +87,7 @@ a:hover {
 .city-container {
   text-align: center;
   width: 100%;
-  background: linear-gradient(135deg, #074655, #136a78);
+  background: linear-gradient(135deg, #0cd1be, #99dcf6);
   padding: 5px 0 7px;
   margin: 0px 5px 5px 6px;
   border-radius: 7px;
@@ -95,31 +96,31 @@ a:hover {
 .change-location {
   margin: 12px 5px 12px 18px;
   background: transparent;
-  color: #24aab6;
-  border: 1px solid #24aab6;
+  color: #026f83;
+  border: 1px solid #026f83;
   border-radius: 7px;
   padding: 5px;
 }
 
 ::placeholder {
-  color: #24aab6;
+  color: #026f83;
   padding-left: 3px;
 }
 
 .search-button {
   margin: 3px;
   padding: 2px 25px;
-  color: #013242;
-  background: #24aab6;
-  border: 1px solid #013242;
+  color: #026f83;
+  background: #99dcf6;
+  border: 1px solid #026f83;
   transition: all 200ms ease-in-out;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 .search-button:hover {
   cursor: pointer;
-  color: #24aab6;
-  background: #013242;
-  border: 1px solid #24aab6;
+  color: #026172;
+  background: #0cd1be;
+  border: 1px solid #026172;
 }
 
 .today-day-time,
@@ -127,7 +128,7 @@ a:hover {
   font-size: 15px;
   text-align: center;
   margin: 10px;
-  color: #2fd0dc;
+  color: #026f83;
 }
 
 .center-icon {
@@ -141,13 +142,13 @@ a:hover {
 }
 
 .row .next-day-container {
-  border: 1px solid #24aab6;
+  border: 1px solid #026f83;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 26px;
   margin: 9px 0 9px 0;
   padding: 0;
-  color: #24aab6;
+  color: #026f83;
 }
 .for-weather-icon-small {
   padding: 0px;
