@@ -1,7 +1,7 @@
 .container {
-  background: linear-gradient(135deg, #99dcf6, #0cd1be);
-  border: 3px solid #028ba3;
-  border-radius: 7px;
+  background: linear-gradient(135deg, #f0f6ff, #00bbf3);
+  border: 2px solid #026172;
+  border-radius: 6px;
   margin: 60px auto;
   margin-bottom: 3px;
   width: 600px;
@@ -36,8 +36,7 @@ h4 {
 }
 
 h5 {
-  font-size: 10px;
-  text-align: left;
+  font-size: 9px;
 }
 
 li {
@@ -51,8 +50,7 @@ ul {
 
 a {
   color: #028ba3;
-
-  transition: all 200ms ease-in-out;
+  transition: all 220ms ease-in-out;
 }
 
 a:hover {
@@ -62,7 +60,7 @@ a:hover {
 
 .active {
   color: #026f83;
-  transition: all 200ms ease-in-out;
+  transition: all 220ms ease-in-out;
   cursor: default;
   font-weight: bolder;
 }
@@ -87,10 +85,10 @@ a:hover {
 .city-container {
   text-align: center;
   width: 100%;
-  background: linear-gradient(135deg, #0cd1be, #99dcf6);
+  background: #94dffb;
   padding: 5px 0 7px;
   margin: 0px 5px 5px 6px;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .change-location {
@@ -98,7 +96,7 @@ a:hover {
   background: transparent;
   color: #026f83;
   border: 1px solid #026f83;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 5px;
 }
 
@@ -111,15 +109,15 @@ a:hover {
   margin: 3px;
   padding: 2px 25px;
   color: #026f83;
-  background: #99dcf6;
+  background: #bceafd;
   border: 1px solid #026f83;
-  transition: all 200ms ease-in-out;
+  transition: all 220ms ease-in-out;
   border-radius: 5px;
 }
 .search-button:hover {
   cursor: pointer;
   color: #026172;
-  background: #0cd1be;
+  background: #82dbfc;
   border: 1px solid #026172;
 }
 
@@ -143,7 +141,7 @@ a:hover {
 
 .row .next-day-container {
   border: 1px solid #026f83;
-  border-radius: 7px;
+  border-radius: 5px;
   font-size: 15px;
   line-height: 26px;
   margin: 9px 0 9px 0;
