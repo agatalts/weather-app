@@ -77,6 +77,8 @@ function showConditions(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+  showCelcius.classList.add("active");
+  showFahrenheit.classList.remove("active");
 }
 
  
