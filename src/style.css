@@ -1,6 +1,6 @@
 .container {
   background: linear-gradient(135deg, #f0f6ff, #00bbf3);
-  border: 2px solid #026172;
+  border: 2px solid #014491;
   border-radius: 6px;
   margin: 60px auto;
   margin-bottom: 3px;
@@ -17,13 +17,13 @@ h1 {
   font-size: 30px;
   margin: auto;
   vertical-align: middle;
-  color: #026172;
+  color: #014491;
 }
 
 h3 {
   font-size: 60px;
   text-align: right;
-  color: #026172;
+  color: #013672;
   margin-bottom: 0;
   margin-right: 20px;
 }
@@ -31,12 +31,12 @@ h3 {
 h4 {
   font-size: 18px;
   text-align: center;
-  color: #026f83;
+  color: #014491;
   margin-top: 0px;
 }
 
 h5 {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 li {
@@ -49,7 +49,7 @@ ul {
 }
 
 a {
-  color: #028ba3;
+  color: #00bbf3;
   transition: all 220ms ease-in-out;
 }
 
@@ -59,7 +59,7 @@ a:hover {
 }
 
 .active {
-  color: #026f83;
+  color: #013672;
   transition: all 220ms ease-in-out;
   cursor: default;
   font-weight: bolder;
@@ -67,7 +67,7 @@ a:hover {
 
 .active:hover {
   text-decoration: none;
-  color: #026f83;
+  color: #013672;
 }
 
 .tempCF {
@@ -94,31 +94,31 @@ a:hover {
 .change-location {
   margin: 12px 5px 12px 18px;
   background: transparent;
-  color: #026f83;
-  border: 1px solid #026f83;
+  color: #014491;
+  border: 1px solid #014491;
   border-radius: 5px;
   padding: 5px;
 }
 
 ::placeholder {
-  color: #026f83;
+  color: #014491;
   padding-left: 3px;
 }
 
 .search-button {
   margin: 3px;
   padding: 2px 25px;
-  color: #026f83;
+  color: #014491;
   background: #bceafd;
-  border: 1px solid #026f83;
+  border: 1px solid #014491;
   transition: all 220ms ease-in-out;
   border-radius: 5px;
 }
 .search-button:hover {
   cursor: pointer;
-  color: #026172;
+  color: #014491;
   background: #82dbfc;
-  border: 1px solid #026172;
+  border: 1px solid #014491;
 }
 
 .today-day-time,
@@ -126,7 +126,7 @@ a:hover {
   font-size: 15px;
   text-align: center;
   margin: 10px;
-  color: #026f83;
+  color: #014491;
 }
 
 .center-icon {
@@ -136,17 +136,16 @@ a:hover {
 .weather-icon-large {
   font-size: 100px;
   padding: 20px 20px 10px 20px;
-  color: #b9f6fa;
 }
 
 .row .next-day-container {
-  border: 1px solid #026f83;
+  border: 1px solid #014491;
   border-radius: 5px;
   font-size: 15px;
   line-height: 26px;
   margin: 9px 0 9px 0;
   padding: 0;
-  color: #026f83;
+  color: #014491;
 }
 .for-weather-icon-small {
   padding: 0px;
